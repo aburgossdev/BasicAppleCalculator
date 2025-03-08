@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    background-color: black;
+    width: 90vw;
+    max-width: 22em;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.1em;
+    padding: 1.4em;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.pantalla {
+    grid-column: span 4;
+    font-size: 4em;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 0.6em;
+    text-align: right;
+    padding: 0.1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(47, 47, 47);
+    border-radius: 1000px;
+    width: 9.5vh;
+    height: 9.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 0;
+}
+
+.opr {
+    background-color: rgb(208, 136, 2);
+}
+
+.itr {
+    background-color: rgb(195, 195, 195);
+    color: black;
+}
+
+#cero {
+    grid-column: span 2;
+    width: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    .calculadora {
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 9 / 16;
+        padding-left: 1.5em;
+    }
+
+    .pantalla {
+        font-size: 17vw;
+    }
+
+    .btn {
+        width: 17vw;
+        height: 17vw;
+        font-size: 6vw;
+    }
+}
